@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+
+
+
+a, a:hover{
+    text-decoration: none;
+}
+
+
+nav{
+    background: #faf8f7;
+    display: flex;
+    align-items: flex-start;
+}
+
+nav a{
+    color: black;
+}
+
+nav a:hover{
+    color: white;
+    background-color: #7ca2b1;
+    }
+
+/* the nav bar writing*/
+nav li a {
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 15px 50px;
+  font-family: roxborough, garamond,  serif;
+  font-weight: bold;
+    
+}
+
+.topnav-right {
+    float: right;
+    background-color: #7ca2b1;
+  }
+
+
+/*.logo{flex 1;} */
+
+.logo a{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.logo a:hover{color: #faf8f7; }
+
+.bag a:hover{color: #faf8f7;}
+
+
+.logo img{
+    
+    margin-right: 3px;
+}
+
+
+.menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.menu li{
+    padding: 5px 25px;
+    font-size: 16px;
+    }
+
+.toggle{
+    font-size: 30px;
+    display: none;
+}
+
+@media screen and (max-width: 600px){
+    nav{
+        display: block;
+        position: relative;
+        padding: 0px 0px;
+    }
+   
+    .menu{
+    margin-top: 15px;
+    display: none;
+}
+    
+    .menu.active, .toggle{
+        display: block;
+    }
+    
+    .toggle{
+        position: absolute;
+        top: 15px;
+        right: 20px;   
+    }
+    
+    .logo img{
+    width: 50%;
+    margin-right: 3px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+/* Grid Layout */
+
+
+.item1 { grid-area: header; }
+.item2 { grid-area: main; }
+.item3 { grid-area: right; }
+.item4 { grid-area: footer; }
+.item5 { grid-area: image;}
+.item6 { grid-area: info;}
+.item7 { grid-area: bottomr;}
+.item8 { grid-area: bottoml;}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'footer footer footer footer footer footer '
+    ' main main main main right right'
+    ' image image info info info info'
+    'bottomr bottomr bottomr bottomr bottoml bottoml'
+    ;
+  gap: 3px;
+  background-color: #fafafa;
+  padding: 10px;
+}
+
+.grid-container > div {
+  text-align: center;
+  font-size: 30px;
+   background-color:#E0E0E0; 
+}
+
+
+
+
+div.item1{
+  background-color:#E0E0E0;
+}
+
+div.item2{
+    background-color: #7ca2b1;
+    font-family: roxborough, garamond,  serif;
+    font-style: normal;
+    color:#fafafa ;
+}
+
+
+
+div.item3{
+    background-color: #7ca2b1;
+    box-sizing: border-box;
+} 
+
+
+/*div.item4{
+ background-color: #372922;
+ color: #faf8f7;
+ box-sizing: border-box;
+} 
+
+.item4{border-radius: 25%;}*/
+
+div.item5{
+    background-color: #fafafa;
+    box-sizing: border-box;
+} 
+
+div.item6{
+    background-color: #fafafa;
+    font-family: roxborough, garamond,  serif;
+    font-style: normal;
+    color:#372922;
+}
+
+div.item7{
+    background-color: #7ca2b1;
+    font-family: roxborough, garamond,  serif;
+    font-style: normal;
+    color:#fafafa ;
+}
+
+div.item8{
+    background-color: #7ca2b1;
+    box-sizing: border-box;   
+}
+
+div.footer{
+   text-align: center;
+    color: #faf8f7;
+    background-color: #faf8f7; 
+    font-family: roxborough, garamond,  serif;
+    
+}
+
+div.footerimg{
+    float: center;
+}
+
+p{
+    font-size: 50%;
+}
+
+
+
+ion-icon {
+
+  color: #403229;
+  font-size: 40px;
+}
+
+h3{
+    color: #faf8f7;
+    text-align: center;
+    font-weight: 500%;
+    font-family: roxborough, garamond,  serif;
+}
+
+h5{
+ color: #403229;   
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: center;
+    width: 32.32%;
+    padding: 10px;
+    height: 100px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+/* Style for the logout box */
+.logout-box {
+    position: fixed;
+    top: 20px;
+    color: #000000;
+    right: 20px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the logout button */
+.logout-button {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #000000;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #0056b3;
+}
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        .flex-container {
+            display: flex;
+            background-color: #fafafa;
+            justify-content: space-between; 
+          }
+        
+          .flex-container > div {
+            background-color: #fafafa;
+            margin: 10px;
+            font-size: 20px;
+        
+          }
+          .success-message {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
